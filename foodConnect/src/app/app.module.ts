@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { RecreqsComponent } from './recreqs/recreqs.component';
 import { LaunchComponent } from './launch/launch.component';
 import { DonorFormComponent } from './donor-form/donor-form.component';
+import { ButtonModule, DropdownModule, NumberModule } from "carbon-components-angular";
 
 const routes: Routes = [
   {
@@ -46,7 +47,10 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ButtonModule,
+    DropdownModule,
+    NumberModule
   ],
   providers: [],
   bootstrap: [AppComponent]
