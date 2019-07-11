@@ -1,1 +1,69 @@
 /*css*/
+
+.bx--detail-page-header-content{
+  background-color: #1e71f7;
+  height: 120px;
+  width: 100%;
+  position: relative;
+}
+
+.bx--btn{
+  background-color: #1e71f7;
+
+}
+
+.center-container{
+    position:absolute;
+    width: 75%;
+    bottom:0;
+    text-align:center;
+}
+
+.bx--detail-page-header-title{
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: white;
+}
+
+.form-container{
+  position: relative;
+  top: 30px;
+  width: 375px;
+  left: 7.5%;
+}
+
+.form-title{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-subtitle{
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 375px;
+}
+
+.bx--form-item{
+  position:absolute;
+  width: 60%;
+  text-align:center;
+}
+
+.radio-container{
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.label-spacer{
+  margin-top: 20px;
+}
+
+.bx--label{
+  font-size: 14px;
+}
+
+.button-spacer{
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
