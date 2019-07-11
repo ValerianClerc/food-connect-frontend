@@ -8,6 +8,7 @@ import { DonorpostComponent } from './donorpost/donorpost.component';
 import { RegisterComponent } from './register/register.component';
 import { RecreqsComponent } from './recreqs/recreqs.component';
 import { LaunchComponent } from './launch/launch.component';
+import { DonorFormComponent } from './donor-form/donor-form.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'receivedonations',
     component: RecreqsComponent
+  },
+  {
+    path: 'registerdonor',
+    component: DonorFormComponent
   }
 ];
 
@@ -34,10 +39,12 @@ const routes: Routes = [
     DonorpostComponent,
     LaunchComponent,
     RecreqsComponent,
-    RegisterComponent
+    RegisterComponent,
+    DonorFormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],
