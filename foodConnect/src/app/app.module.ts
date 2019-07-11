@@ -7,12 +7,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { DonorpostComponent } from './donorpost/donorpost.component';
 import { RegisterComponent } from './register/register.component';
 import { RecreqsComponent } from './recreqs/recreqs.component';
-import { LoginComponent } from './login/login.component';
+import { LaunchComponent } from './launch/launch.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    component: LaunchComponent
   },
   {
     path: 'register',
@@ -32,7 +32,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     DonorpostComponent,
-    LoginComponent,
+    LaunchComponent,
     RecreqsComponent,
     RegisterComponent
   ],
