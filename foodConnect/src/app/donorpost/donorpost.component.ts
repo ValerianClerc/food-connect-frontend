@@ -6,7 +6,7 @@ import { DonorPost } from './donorpost';
   styleUrls: ['./donorpost.component.scss']
 })
 export class DonorpostComponent {
-  donorpost = new DonorPost('','','','',0,0,'','',false,'','','');
+  donorpost = new DonorPost('','','','', '', 0,0,'','',false,'','','');
   onSubmit(){
     console.log(this.donorpost.pickupAddress+'\n'+
     this.donorpost.foodType+'\n'

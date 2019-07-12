@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { RecreqsComponent } from './recreqs/recreqs.component';
 import { LaunchComponent } from './launch/launch.component';
 import { DonorFormComponent } from './donor-form/donor-form.component';
+import { RecipientFormComponent } from './recipient-form/recipient-form.component';
 import { ButtonModule, DropdownModule, NumberModule } from "carbon-components-angular";
 
 const routes: Routes = [
