@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'registerdonor',
     component: DonorFormComponent
+  },
+  {
+    path: 'registerrecipient',
+    component: RecipientFormComponent
   }
 ];
 
@@ -41,7 +45,8 @@ const routes: Routes = [
     LaunchComponent,
     RecreqsComponent,
     RegisterComponent,
-    DonorFormComponent
+    DonorFormComponent,
+    RecipientFormComponent
   ],
   imports: [
     BrowserModule,
