@@ -1,0 +1,103 @@
+<div id="recipientsignup" class="bx--grid">
+    <div class="bx--row">
+        <div class="bx--col">
+            <h1><strong>Signup</strong></h1>
+        </div>
+    </div>
+    <div class="bx--row">
+        <div class="bx--col">
+            <div id="donor-btn-col" class="bx--col">
+                <h2><strong>I would like to be a...</strong></h2>
+                <button class="bx--btn bx--btn--tertiary" type="button" [routerLink]="['../registerdonor']" >Donor</button>
+                <button class="bx--btn bx--btn--secondary" type="button" [routerLink]="['../registerrecipient']" >Recipient</button>
+            </div>
+        </div>
+    </div>
+    <div class="bx--row">
+        <div class="bx--col">
+            <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+                <div class="bx--form-item">
+                    <label class="bx--label" for="name">Name</label>
+                    <input type="text" class="bx--text-input" id="name" required [(ngModel)]="recipient.name" name="name" #name="ngModel">
+                </div>
+            
+                <div class="bx--form-item">
+                    <label class="bx--label" for="email">Email</label>
+                    <input type="text" class="bx--text-input" id="email" name="email" required [(ngModel)]="recipient.email" #email="ngModel">
+				</div>
+
+				<div class="bx--form-item">
+					<label class="bx--label" for="password">Password</label>
+					<input type="text" class="bx--text-input" id="password" name="password" required [(ngModel)]="recipient.password" #password="ngModel">
+				</div>
+
+				<h1><strong>Tell us a bit about your organizaitons</strong></h1>
+
+				<div class="bx--form-item">
+					<div class="bx--select">
+						<label for="organization" class="bx--label">Organization Type</label>
+						<div class="bx--select-input__wrapper">
+							<select id="organization" name="organization" class="bx--select-input" required [(ngModel)]="recipient.organization" #organizaiton="ngModel">
+								<option class="bx--select-option" value=""  disabled selected hidden>Choose an option </option>  
+								<option class="bx--select-option" value="grocery-store" >Grocery Store</option>
+								<option class="bx--select-option" value="restaurant" >Restaurant</option>
+								<option class="bx--select-option" value="bakery" >Bakery</option>
+								<option class="bx--select-option" value="commercial-cafeteria" >Commercial Cafeteria</option>
+							</select>
+							<svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--select__arrow" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M5 6L0 1 .7.3 5 4.6 9.3.3l.7.7z"></path></svg>
+						</div>
+					</div>
+				</div>
+
+				<div class="bx--form-item">
+					<label class="bx--label" for="address">Address</label>
+					<input type="text" class="bx--text-input" id="address" name="address" required [(ngModel)]="recipient.address" #address="ngModel">
+                </div>
+                
+                <div class="bx--form-item">
+                    <div data-numberinput class="bx--number">
+                        <label for="orgSize" class="bx--label">How many people do you feed?</label>
+                        <div class="bx--number__input-wrapper">
+                            <input id="number-input0" type="number" min="1" value="1" name="orgSize" required [(ngModel)]="recipient.orgSize" #orgSize="ngModel">
+                        </div>
+                    </div>
+                </div>
+
+				<div class="bx--form-item">
+					<label class="bx--label" for="emergency-contact">Emergency Contact</label>
+					<input type="text" class="bx--text-input" id="emergency-contact" name="emergency-contact" required [(ngModel)]="recipient.emergencyContact" #emerencyContact="ngModel">
+				</div>
+
+				<div class="bx--form-item">
+					<label class="bx--label" for="emergency-number">Emergency Number</label>
+					<input type="text" class="bx--text-input" id="emergency-number" name="emergency-number" required [(ngModel)]="recipient.emergencyNumber" #emerencyNumber="ngModel">
+                </div>
+                
+                <div class="bx--form-item">
+                    <div class="bx--select">
+                        <label for="times" class="bx--label">Choose your preferred delivery time</label>
+                        <div class="bx--select-input__wrapper">
+                            <select id="times" name="times" class="bx--select-input" required [(ngModel)]="recipient.times" #times="ngModel">
+                                <option class="bx--select-option" value=""  disabled selected hidden>Choose an option </option>  
+                                <option class="bx--select-option" value="morning" >Morning</option>
+                                <option class="bx--select-option" value="midday" >Midday</option>
+                                <option class="bx--select-option" value="afternoon" >Afternoon</option>
+                                <option class="bx--select-option" value="evening" >Evening</option>
+                            </select>
+                            <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--select__arrow" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M5 6L0 1 .7.3 5 4.6 9.3.3l.7.7z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bx--form-item">
+                        <label for="wishLise" class="bx--label">What kinds of food you would like to receive?</label>
+                        <textarea id="wishList" name="wishList" class="bx--text-area" rows="4" cols="50" placeholder="Let us know here..." required [(ngModel)]="recipient.wishList" #wishList="ngModel"></textarea>
+                    </div>
+            
+                <div class="bx--form-item">
+					<button class="bx--btn bx--btn--primary" type="submit">Submit</button>
+				</div>
+            </form>
+        </div>
+    </div>
+</div>

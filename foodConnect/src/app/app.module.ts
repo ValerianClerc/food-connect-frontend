@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { RecreqsComponent } from './recreqs/recreqs.component';
 import { LaunchComponent } from './launch/launch.component';
 import { DonorFormComponent } from './donor-form/donor-form.component';
+import { RecipientFormComponent } from './recipient-form/recipient-form.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'registerdonor',
     component: DonorFormComponent
+  },
+  {
+    path: 'registerrecipient',
+    component: RecipientFormComponent
   }
 ];
 
@@ -40,7 +45,8 @@ const routes: Routes = [
     LaunchComponent,
     RecreqsComponent,
     RegisterComponent,
-    DonorFormComponent
+    DonorFormComponent,
+    RecipientFormComponent
   ],
   imports: [
     BrowserModule,
