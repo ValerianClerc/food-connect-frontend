@@ -1,1 +1,186 @@
-<p>donorpost works!</p>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+</head>
+
+<header data-detail-page-header class="bx--detail-page-header bx--detail-page-header--no-tabs">
+  <div class="bx--detail-page-header-content">
+    <div class="center-container">
+      <h1 class="bx--detail-page-header-title">New Donation</h1>
+    </div>
+  </div>
+</header>
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()" #donorPost="ngForm">
+
+    <div class="bx--form-item">
+
+      <h1 class="form-title">About Your Donation</h1>
+      <h2 class="form-subtitle">Please provide information regarding your donation below:</h2>
+
+      <label for="text-input-1" class="bx--label">Pick Up Address</label>
+      <input id="address-input" name="pickupAddress" [(ngModel)]="donorpost.pickupAddress" type="text" class="bx--text-input" placeholder="Enter your address">
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">Food description</label>
+      </div>
+      <div class="text-container">
+        <textarea id="description-area" name="foodDescription" [(ngModel)]="donorpost.foodDesc" class="bx--text-area" rows="2" cols="50" placeholder="Describe your food here"></textarea>
+      </div>
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">What type of food is this?</label>
+      </div>
+
+      <div class="radio-container">
+        <input id="type-radio-1" class="bx--radio-button" name="foodTypePM" [(ngModel)]="donorpost.foodType" type="radio" value="pre-made" name="type-radio" tabindex="0" checked>
+        <label for="type-radio-1" class="bx--radio-button__label">
+          <span class="bx--radio-button__appearance"></span>
+          Pre-made
+        </label>
+      </div>
+      <div class="radio-container">
+        <input id="type-radio-2" class="bx--radio-button" name="foodTypePR" [(ngModel)]="donorpost.foodType" type="radio" value="perishable" name="type-radio" tabindex="0" checked>
+        <label for="type-radio-2" class="bx--radio-button__label">
+          <span class="bx--radio-button__appearance"></span>
+          Perishable
+        </label>
+      </div>
+      <div class="radio-container">
+        <input id="type-radio-3" class="bx--radio-button" name="foodTypeNP" [(ngModel)]="donorpost.foodType" type="radio" value="non-perishable" name="type-radio" tabindex="0" checked>
+        <label for="type-radio-3" class="bx--radio-button__label">
+          <span class="bx--radio-button__appearance"></span>
+          Non-perishable
+        </label>
+      </div>
+      <div class="radio-container">
+        <input id="type-radio-4" class="bx--radio-button" name="foodTypeRF" [(ngModel)]="donorpost.foodType" type="radio" value="refrigerated" name="type-radio" tabindex="0" checked>
+        <label for="type-radio-4" class="bx--radio-button__label">
+          <span class="bx--radio-button__appearance"></span>
+          Refrigerated
+        </label>
+      </div>
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">Is this food consumable?</label>
+      </div>
+
+      <div class="radio-container">
+        <input id="cons-radio-1" class="bx--radio-button" name="consH" [(ngModel)]="donorpost.consumable" type="radio" value="yes-human" name="cons-radio" tabindex="0" checked>
+        <label for="cons-radio-1" class="bx--radio-button__label">
+          <span class="bx--radio-button__appearance"></span>
+          Yes, for human consumption
+        </label>
+      </div>
+      <div class="radio-container">
+        <input id="cons-radio-2" class="bx--radio-button" name="consA" [(ngModel)]="donorpost.consumable" type="radio" value="yes-animal" name="cons-radio" tabindex="0" checked>
+        <label for="cons-radio-2" class="bx--radio-button__label">
+          <span class="bx--radio-button__appearance"></span>
+          Yes, for animal consumption
+        </label>
+      </div>
+      <div class="radio-container">
+        <input id="cons-radio-3" class="bx--radio-button" name="consN" [(ngModel)]="donorpost.consumable" type="radio" value="no" name="cons-radio" tabindex="0" checked>
+        <label for="cons-radio-3" class="bx--radio-button__label">
+          <span class="bx--radio-button__appearance"></span>
+          No
+        </label>
+      </div>
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">Allergen information</label>
+      </div>
+
+      <div class="bx--select">
+    		<div class="bx--select-input__wrapper">
+    			<select id="select-id" class="bx--select-input" name="allergy" [(ngModel)]="donorpost.allergenInfo">
+              <option class="bx--select-option" value="option0" disabled>This contains:</option>
+              <option class="bx--select-option" value="fish" >Fish</option>
+              <option class="bx--select-option" value="shellfish" >Shellfish </option>
+              <option class="bx--select-option" value="dairy" >Dairy</option>
+              <option class="bx--select-option" value="soy" >Soy</option>
+              <option class="bx--select-option" value="none" >None</option>
+          </select>
+    			<svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--select__arrow" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M5 6L0 1 .7.3 5 4.6 9.3.3l.7.7z"></path></svg>
+    		</div>
+    	</div>
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">Weight of food (lbs)</label>
+      </div>
+
+      <div data-numberinput class="bx--number">
+        <input id="weight-input" type="number" name="weight" [(ngModel)]="donorpost.foodWeight" min="0" max="1000" value= "0">
+      </div>
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">Value of food at time of donation</label>
+      </div>
+
+      <div data-numberinput class="bx--number">
+        <input id="weight-input" type="number" name="value" [(ngModel)]="donorpost.foodValue" min="0" max="10000" value= "0">
+      </div>
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">Reason for donation</label>
+      </div>
+
+      <div class="bx--select">
+        <div class="bx--select-input__wrapper">
+          <select id="select-id" class="bx--select-input" name="reason" [(ngModel)]="donorpost.reasonForDonation">
+              <option class="bx--select-option" value="option0" disabled>Donating because:</option>
+              <option class="bx--select-option" value="sellby" >Past sell-by date</option>
+              <option class="bx--select-option" value="bestby" >Past best-by date </option>
+              <option class="bx--select-option" value="expired" >Past expiration date</option>
+              <option class="bx--select-option" value="broken" >Broken/crushed packaging</option>
+              <option class="bx--select-option" value="ugly" >Ugly food</option>
+              <option class="bx--select-option" value="excess" >Excess food</option>
+          </select>
+          <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--select__arrow" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M5 6L0 1 .7.3 5 4.6 9.3.3l.7.7z"></path></svg>
+        </div>
+      </div>
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">Time available for pickup</label>
+      </div>
+
+
+      <div class="bx--time-picker">
+        <div class="bx--time-picker__input">
+          <input id="time-picker-1" type="text" class="bx--time-picker__input-field" pattern="(1[012]|[1-9]):[0-5][0-9](\\s)?(?i)"
+            placeholder="hh:mm" maxlength="5">
+        </div>
+        <div class="bx--time-picker__select bx--select bx--select--inline">
+          <label for="select-id-1" class="bx--label bx--visually-hidden">Select AM/PM</label>
+          <select id="select-id-1" class="bx--select-input">
+            <option class="bx--select-option" value="AM">AM</option>
+            <option class="bx--select-option" value="PM">PM</option>
+          </select>
+          <svg class="bx--select__arrow" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+            <path d="M10 0L5 5 0 0z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="label-spacer">
+        <label for="text-input-1" class="bx--label">Date of expiration</label>
+      </div>
+
+      <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+        <div class="bx--date-picker-container">
+          <input type="text" id="date-picker-3" class="bx--date-picker__input" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+            data-date-picker-input />
+        </div>
+      </div>
+
+      <div class="checkbox-container">
+        <input id="bx--checkbox-red" class="bx--checkbox" name="inspected" [(ngModel)]="donorpost.foodInspected" type="checkbox" value="true" name="checkbox">
+        <label for="bx--checkbox-red" class="bx--checkbox-label">This item has been inspected and is suitable for donation</label>
+      </div>
+
+      <div class="button-spacer">
+        <button class="bx--btn bx--btn--primary" type="submit">Post Donation</button>
+      </div>
+    </div>
+  </form>
+</div>
