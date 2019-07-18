@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "@carbon/charts": "^0.15.1",
     "@carbon/icon-helpers": "^10.2.0",
     "@carbon/icons-angular": "^10.3.2",
     "@carbon/layout": "^10.2.0",

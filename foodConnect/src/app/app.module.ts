@@ -5,21 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DonorpostComponent } from './donorpost/donorpost.component';
-import { RegisterComponent } from './register/register.component';
 import { RecreqsComponent } from './recreqs/recreqs.component';
 import { LaunchComponent } from './launch/launch.component';
 import { DonorFormComponent } from './donor-form/donor-form.component';
 import { RecipientFormComponent } from './recipient-form/recipient-form.component';
 import { ButtonModule, DropdownModule, NumberModule } from "carbon-components-angular";
+import { RecdashComponent } from './recdash/recdash.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LaunchComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
   },
   {
     path: 'postdonations',
@@ -36,6 +32,10 @@ const routes: Routes = [
   {
     path: 'registerrecipient',
     component: RecipientFormComponent
+  },
+  {
+    path: 'recdash',
+    component: RecdashComponent
   }
 ];
 
@@ -45,9 +45,10 @@ const routes: Routes = [
     DonorpostComponent,
     LaunchComponent,
     RecreqsComponent,
-    RegisterComponent,
     DonorFormComponent,
-    RecipientFormComponent
+    RecipientFormComponent,
+    RecdashComponent
+
   ],
   imports: [
     BrowserModule,
