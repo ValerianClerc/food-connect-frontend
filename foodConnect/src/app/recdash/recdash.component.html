@@ -6,7 +6,55 @@
 <header data-detail-page-header class="bx--detail-page-header bx--detail-page-header--no-tabs">
   <div class="bx--detail-page-header-content">
     <div class="center-container">
-      <h1 class="bx--detail-page-header-title">Dashboard</h1>
+      <h1 class="bx--detail-page-header-title">My Impact</h1>
     </div>
   </div>
 </header>
+
+<div id="impact" class="bx--grid">
+  <div class="bx--row">
+    <div id="envheader" class="bx--col">
+        <h1><strong>Environmental Impact</strong></h1>
+    </div>
+  </div>
+  <div class="bx--row">
+    <div class="bx--col">
+        <h1 class="bx--detail-page-header-title">72</h1>
+    </div>
+    <div class="bx--col">
+        <h1 class="bx--detail-page-header-title">4%</h1>
+    </div>
+  </div>
+  <div class="bx--row">
+    <div class="bx--col">
+      <ul data-progress data-progress-current class="bx--progress">
+        <li class="bx--progress-step bx--progress-step--current">
+          <svg>
+            <circle r="24"></circle>
+          </svg>
+          <p class="bx--progress-label">Meals<br>Donated<br>This Month</p>
+          <span class="bx--progress-line"></span>
+        </li>
+      </ul>
+    </div>
+    <div class="bx--col">
+      <ul data-progress data-progress-current class="bx--progress">
+        <li class="bx--progress-step bx--progress-step--current">
+          <svg>
+            <circle r="24"></circle>
+          </svg>
+          <p class="bx--progress-label">CO2<br>Emissions<br>Reduced</p>
+          <span class="bx--progress-line"></span>
+        </li>
+      </ul>
+    </div>
+    <div id="donationbtn" class="bx--row">
+      <div class="bx--col">
+        <button class="bx--btn bx--btn--primary" type="button" [routerLink]="['../postdonations']">Post new donation</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
